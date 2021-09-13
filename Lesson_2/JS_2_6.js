@@ -9,8 +9,8 @@ alert(`Ваша сумма ${money} ${getCorrectWord(money)} успешно за
  * @returns слово в правильном падеже
  */
 function getCorrectWord(a) {
-    const b = String(a);
-    const lastChar = +b.charAt(b.length - 1);
+    const b = String(a);                        // можно ли эти две строки
+    const lastChar = +b.charAt(b.length - 1);   // как-то объеденить?
 
     if (a < 5 || a > 20) {
         if (lastChar === 1) return "рубль";
