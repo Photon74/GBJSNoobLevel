@@ -1,20 +1,22 @@
 "use strict";
 
-let money = parseInt(prompt("Сколько денег вы хотите положить на счет?"));
-alert(`Ваша сумма ${money} ${getCorrectWord(money)} успешно зачислена.`);
+const money = parseInt(prompt("Сколько денег вы хотите положить на счет?"));
+const wordsRub = ["рубль", "рубля", "рублей"];
+alert(`Ваша сумма ${money} ${getCorrectWord(money, wordsRub)} успешно зачислена.`);
 
 /**
- * Принимает число и возвращает слово "рубль" в правильной форме
- * @param {number} num сумма
- * @returns "рубль" в правильной форме
+ * Принимает число и массив слов - возвращает слово в правильной форме
+ * @param {number} num число
+ * @param {string[]} words массив слов(им.п.ед.ч., род.п.ед.ч., род.п.мн.ч.)
+ * @returns слово в правильной форме
  */
-function getCorrectWord(num) {
+function getCorrectWord(num, words) {
     const a = num % 100; 
     const b = num % 10;
 
     if (a < 5 || a > 20) {
-        if (b === 1) return "рубль";
-        if (b > 1 && b <= 4) return "рубля";
+        if (b === 1) return words[0];
+        if (b > 1 && b <= 4) return words[1];
     }
-    return "рублей";
+    return words[2];
 }
