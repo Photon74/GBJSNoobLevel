@@ -5,13 +5,16 @@ let a = null;
 let num1 = {};
 
 do {
-    a = prompt('Введите целое число.');
+    a = prompt('Введите целое число от 0 до 999.');
 
     if (isNaN(a) || a === '') {
         alert('Вы ввели не число!');
         console.log(num1);
     } else if (!(Math.floor(a) === +a)) {
         alert('Вы ввели не целое число!');
+        console.log(num1);
+    } else if (a < 0 || a > 999) {
+        alert('Число не в пределах допустимого диапазона!');
         console.log(num1);
     } else {
         condition = false;
