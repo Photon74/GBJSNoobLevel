@@ -17,16 +17,18 @@ do {
         alert('Число не в пределах допустимого диапазона!');
         console.log(num1);
     } else {
-        condition = false;
+        num1 = new NumToObj(a);
+        console.log(num1);
+        let answer = prompt('Желаете еще число преобразовать? (1 = да)');
+        if (answer == 1 || answer == 'да' || answer === 'yes') {
+            condition = true;
+        } else condition = false;
+
     }
 } while (condition);
 
 function NumToObj(num) {
     this.units = num % 10;
     this.tens = Math.floor(num % 100 / 10);
-    this.hundreds = Math.floor(num % 1000 / 100);
+    this.hundreds = Math.floor(num / 100);
 }
-
-num1 = new NumToObj(a);
-
-console.log(num1);
