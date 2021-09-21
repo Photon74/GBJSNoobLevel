@@ -28,16 +28,18 @@ class Post1 {
         this.text = text;
         this.date = date;
     }
+    
     edit(text) {
         this.text = text;
     }
 }
 
 class AttachedPost1 extends Post1 {
+    highlighted = false;
     constructor(author, text, date) {
         super(author, text, date);
-        this.highlighted = false;
     }
+
     makeTextHighLighted() {
         this.highlighted = true;
     }

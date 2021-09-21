@@ -5,12 +5,12 @@ let a = null;
 let num1 = {};
 
 do {
-    a = prompt('Введите целое число от 0 до 999.');
+    a = +prompt('Введите целое число от 0 до 999.');
 
-    if (isNaN(a) || a === '') {
+    if (Number.isNaN(a) || a === '') {
         alert('Вы ввели не число!');
         console.log(num1);
-    } else if (!(Math.floor(a) === +a)) {
+    } else if (!Number.isInteger(a)) {
         alert('Вы ввели не целое число!');
         console.log(num1);
     } else if (a < 0 || a > 999) {
