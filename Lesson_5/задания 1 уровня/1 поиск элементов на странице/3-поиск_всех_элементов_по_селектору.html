@@ -29,8 +29,10 @@
     и выведите их в консоль. -->
 
     <script>
-        const links = document.querySelector('.card-body').querySelectorAll('.card-link');
-        console.log(links[0], links[1]);
+        const links = document.querySelectorAll('.card-body .card-link');
+        links.forEach(link => 
+            console.log(link)
+        );
     </script>
 </body>
 
