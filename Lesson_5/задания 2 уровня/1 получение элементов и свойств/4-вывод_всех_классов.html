@@ -13,10 +13,16 @@
     1. Сохраните в переменную тег div.
     2. Создайте переменную classes, и в нее сохраните значение свойства classList.
     3. C помощью forEach переберите classes и выведите каждый класс в консоль.
-     -->
+    -->
 
     <script>
-        
+        const divEl = document.querySelector('div');
+
+        const classes = divEl.classList;
+
+        classes.forEach(value => {
+            console.log(value);
+        });
     </script>
 </body>
 </html>
