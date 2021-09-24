@@ -18,5 +18,18 @@
     3. Переберите с помощью forEach event.target.classList и выведите каждый класс
     в консоль.
     -->
+
+    <script>
+        const pEl = document.querySelector('p');
+
+        pEl.addEventListener('click', event => {
+            const classes = event.target.classList;
+            console.log(classes);
+            
+            classes.forEach(value => {
+                console.log(value);
+            });
+        });
+    </script>
 </body>
 </html>

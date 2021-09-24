@@ -16,7 +16,7 @@
     2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
 
     <script>
-        const aEl = document.querySelectorAll('a');
+        const aEl = document.links;
 
         aEl.forEach(a => {
             if (!a.innerText.includes('ссылка')) {

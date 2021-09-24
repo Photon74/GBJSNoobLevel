@@ -22,6 +22,13 @@
     <div>Другое описание</div>
     для этого вышеописанную разметку пишите в виде строки в innerHTML.
     -->
+    <script>
+        const productEl = document.querySelector('.product');
+
+        productEl.addEventListener('click', event => {
+            event.target.innerHTML = '<div>Другой товар</div><div>Другое описание</div>'
+        });
+    </script>
 
 </body>
 </html>
