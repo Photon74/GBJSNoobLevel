@@ -46,9 +46,7 @@
             }
             let prevStar = event.target.previousElementSibling;
             while (prevStar){
-                if (!prevStar.classList.contains('goldenClass')){
-                    prevStar.classList.add(goldenClass);
-                }
+                prevStar.classList.add(goldenClass);
                 prevStar = prevStar.previousElementSibling;
             }
         }
