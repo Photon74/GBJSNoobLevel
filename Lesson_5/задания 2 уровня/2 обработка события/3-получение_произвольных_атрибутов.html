@@ -25,23 +25,12 @@
     <script>
         const divEl = document.querySelector('div');
 
-        divEl.addEventListener('click', event => {
-            console.log(event.target.getAttribute('class'));
-            console.log(event.target.getAttribute('id'));
-            console.log(event.target.getAttribute('tabindex'));
-            console.log(event.target.getAttribute('aria-labelledby'));
-            console.log(event.target.getAttribute('aria-hidden'));
-        });
-        
-        // А так не проще? И не безопасней ли?
         divEl.addEventListener('click', () => {
-            const attrs = divEl.attributes;
-            
-            for (let i = 0; i < attrs.length; i++) {
-                console.log(attrs[i].textContent);
+            for (attr of event.target.attributes){
+                console.log(`${attr.name} 
+                = ${event.target.getAttribute(attr.name)}`);
             }
         });
-        
     </script>
 </body>
 </html>
