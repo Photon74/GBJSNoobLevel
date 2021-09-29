@@ -34,8 +34,7 @@
         btn.addEventListener('click', showMessage);
 
         function showMessage(event) {
-            // divMessage.style.transform = 'translateY(-300px`)'; почему-то не работает
-            divMessage.setAttribute('style', `transform: translateY(-${divMessage.clientHeight + offset}px)`);
+            divMessage.style.transform = `translateY(-${divMessage.clientHeight + offset}px)`;
             messageSound.play();
         }
     </script>
