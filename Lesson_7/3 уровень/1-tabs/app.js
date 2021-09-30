@@ -33,7 +33,7 @@ function clickHandler(event) {
  * @param {MouseEvent} event 
  */
 function changeActiveClass(event) {
-    navLinks.forEach(link => link.classList.remove('active'));
+    document.querySelector('.active').classList.remove('active');
     event.target.classList.add('active');
 }
 
