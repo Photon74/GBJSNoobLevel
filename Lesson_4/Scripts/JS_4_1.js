@@ -7,7 +7,7 @@ let num1 = {};
 do {
     a = +prompt('Введите целое число от 0 до 999.');
 
-    if (Number.isNaN(a) || a === '') {
+    if (Number.isNaN(a)) {
         alert('Вы ввели не число!');
         console.log(num1);
     } else if (!Number.isInteger(a)) {
@@ -20,9 +20,7 @@ do {
         num1 = new NumToObj(a);
         console.log(num1);
         let answer = prompt('Желаете еще число преобразовать? (1 = да)');
-        if (answer == 1 || answer == 'да' || answer === 'yes') {
-            condition = true;
-        } else condition = false;
+        condition = answer === '1' || answer === 'да' || answer === 'yes';
 
     }
 } while (condition);
