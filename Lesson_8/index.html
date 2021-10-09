@@ -23,16 +23,16 @@
 
                 <span class="cartIconWrap">
                     <img class="cartIcon" src="images/cart.png" alt="">
-                    <span>5</span>
+                    <span class="cartCounter">0</span>
                 </span>
-                <div class="cart">
+                <div class="cart hidden">
                     <div class="cartRow cartHeader">
                         <div>Название товара</div>
                         <div>Количество</div>
                         <div>Цена за шт.</div>
                         <div>Итого</div>
                     </div>
-                        <div class="cartTotal">
+                    <div class="cartTotal">
                         Товаров в корзине на сумму:
                         $<span class="cartTotalValue">0</span>
                     </div>
@@ -149,12 +149,12 @@
 
         <div class="featuredItems">
 
-            <div class="featuredItem" data-id="1" data-name="ELLERY X M'O CAPSULE" data-price="52">
+            <div class="featuredItem" data-id="1" data-name="ELLERY X MEN" data-price="52">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/1.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="toCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -163,7 +163,7 @@
 
                 <div class="featuredData">
                     <div class="featuredName">
-                        ELLERY X M'O CAPSULE
+                        ELLERY X MEN
                     </div>
                     <div class="featuredText">
                         Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
@@ -177,12 +177,12 @@
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="2" data-name="Colambia Suit Women" data-price="78">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/2.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="toCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -191,7 +191,7 @@
 
                 <div class="featuredData">
                     <div class="featuredName">
-                        ELLERY X M'O CAPSULE
+                        ELLERY X Women
                     </div>
                     <div class="featuredText">
                         Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
@@ -199,18 +199,18 @@
                         up with Moda Operandi.
                     </div>
                     <div class="featuredPrice">
-                        $52.00
+                        $78.00
                     </div>
                 </div>
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="3" data-name="MANGO X viverra" data-price="39">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/3.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="toCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -219,7 +219,7 @@
 
                 <div class="featuredData">
                     <div class="featuredName">
-                        ELLERY X M'O CAPSULE
+                        MANGO X viverra
                     </div>
                     <div class="featuredText">
                         Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
@@ -227,18 +227,18 @@
                         up with Moda Operandi.
                     </div>
                     <div class="featuredPrice">
-                        $52.00
+                        $39.00
                     </div>
                 </div>
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="4" data-name="ADIDAS Your" data-price="57">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/4.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="toCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -247,7 +247,7 @@
 
                 <div class="featuredData">
                     <div class="featuredName">
-                        ELLERY X M'O CAPSULE
+                        ADIDAS Your
                     </div>
                     <div class="featuredText">
                         Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
@@ -255,18 +255,18 @@
                         up with Moda Operandi.
                     </div>
                     <div class="featuredPrice">
-                        $52.00
+                        $57.00
                     </div>
                 </div>
 
             </div>
 
-            <div class="featuredItem">
+            <div class="featuredItem" data-id="5" data-name="LACOSTE next-generation" data-price="49">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/5.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="toCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -275,7 +275,7 @@
 
                 <div class="featuredData">
                     <div class="featuredName">
-                        ELLERY X M'O CAPSULE
+                        LACOSTE next-generation
                     </div>
                     <div class="featuredText">
                         Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
@@ -283,17 +283,18 @@
                         up with Moda Operandi.
                     </div>
                     <div class="featuredPrice">
-                        $52.00
+                        $49.00
                     </div>
                 </div>
 
             </div>
-            <div class="featuredItem">
+ 
+            <div class="featuredItem" data-id="6" data-name="RIVER ISLAND Fetured" data-price="81">
 
                 <div class="featuredImgWrap">
                     <img src="images/featured/6.jpg" alt="">
                     <div class="featuredImgDark">
-                        <button>
+                        <button class="toCart">
                             <img src="images/cart.svg" alt="">
                             Add to Cart
                         </button>
@@ -302,7 +303,7 @@
 
                 <div class="featuredData">
                     <div class="featuredName">
-                        ELLERY X M'O CAPSULE
+                        RIVER ISLAND Fetured
                     </div>
                     <div class="featuredText">
                         Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
@@ -310,7 +311,7 @@
                         up with Moda Operandi.
                     </div>
                     <div class="featuredPrice">
-                        $52.00
+                        $81.00
                     </div>
                 </div>
 
@@ -417,6 +418,7 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="cart.js"></script>
 </body>
 
 </html>
