@@ -2,7 +2,10 @@
 
 const cart = document.querySelector('.cart');
 const cartIcon = document.querySelector('.cartIconWrap');
-cartIcon.addEventListener('click', () => cart.classList.toggle('hidden'));
+cartIcon.addEventListener('click', () => {
+    cart.classList.toggle('hidden');
+    //cart.classList.toggle('animated');
+});
 
 const cartRows = {};
 const itemsEl = document.querySelector('.featuredItems');
@@ -15,21 +18,22 @@ itemsEl.addEventListener('click', clickHandler);
 function clickHandler(event) {
     if (!event.target.classList.contains('toCart')) return;
     document.querySelectorAll('.feturedRow').forEach(row => row.remove());
+    let productDataset = event.target.closest('.featuredItem').dataset;
     let product = {
-            id: event.target.parentNode.parentNode.parentNode.dataset.id,
-            name: event.target.parentNode.parentNode.parentNode.dataset.name,
-            price: event.target.parentNode.parentNode.parentNode.dataset.price,
+            id: productDataset.id,
+            name: productDataset.name,
+            price: productDataset.price,
     }
     addToCart(product);
 }
 
 
 function addToCart(product) {
-    getCartRows(product);
-    cartHeader.insertAdjacentHTML('afterend', buildCartRow(cartRows));
+    saveProduct(product);
+    cartHeader.insertAdjacentHTML('afterend', getCartRowsMarkup(cartRows));
 }
 
-function getCartRows(product) {
+function saveProduct(product) {
     if (cartRows.hasOwnProperty(product.id)) {
         cartRows[product.id].counter++;
         cartRows[product.id].total = cartRows[product.id].price * cartRows[product.id].counter;
@@ -44,7 +48,7 @@ function getCartRows(product) {
     }
 }
 
-function buildCartRow(cartRows) {
+function getCartRowsMarkup(cartRows) {
     let result = '';
     let totalCounter = 0;
     let totalValue = 0;
