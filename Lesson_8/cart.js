@@ -1,19 +1,15 @@
 'use strict';
 
-const cart = document.querySelector('.cart');
-const cartIcon = document.querySelector('.cartIconWrap');
-cartIcon.addEventListener('click', () => {
-    cart.classList.toggle('hidden');
-    //cart.classList.toggle('animated');
+document.querySelector('.cartIconWrap').addEventListener('click', () => {
+    document.querySelector('.cart').classList.toggle('hidden');
 });
 
 const cartRows = {};
-const itemsEl = document.querySelector('.featuredItems');
 const cartHeader = document.querySelector('.cartHeader');
 const cartCounter = document.querySelector('.cartCounter');
 const cartTotalValue = document.querySelector('.cartTotalValue');
 
-itemsEl.addEventListener('click', clickHandler);
+document.querySelector('.featuredItems').addEventListener('click', clickHandler);
 
 function clickHandler(event) {
     if (!event.target.classList.contains('toCart')) return;
