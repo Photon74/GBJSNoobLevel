@@ -11,12 +11,13 @@ alert(`Ваша сумма ${money} ${getCorrectWord(money, wordsRub)} успе�
  * @returns слово в правильной форме
  */
 function getCorrectWord(num, words) {
+    if (Number.isInteger(num)){
     const a = num % 100; 
     const b = num % 10;
 
     if (a < 5 || a > 20) {
         if (b === 1) return words[0];
         if (b > 1 && b <= 4) return words[1];
-    }
+    }}
     return words[2];
 }
