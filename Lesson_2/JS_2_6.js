@@ -1,6 +1,6 @@
 "use strict";
 
-const money = parseInt(prompt("Сколько денег вы хотите положить на счет?"));
+const money = parseInt(prompt("Сколько денег вы хотите положить на счет?"), 10);
 const wordsRub = ["рубль", "рубля", "рублей"];
 alert(`Ваша сумма ${money} ${getCorrectWord(money, wordsRub)} успешно зачислена.`);
 
